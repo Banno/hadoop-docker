@@ -1,5 +1,5 @@
 hadoop:
-  image: registry.banno-internal.com/hadoop-docker:2.0.0-cdh4.4.0b
+  image: registry.banno-internal.com/hadoop-docker:2.0.0-mr1-cdh4.4.0
   volumes:
     - /Users:/Users
   hostname: dev.banno.com
