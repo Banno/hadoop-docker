@@ -19,15 +19,17 @@ su - hdfs -c 'hadoop fs -chmod 1777 /var/lib/hadoop-hdfs/cache/mapred/mapred/sta
 su - hdfs -c 'hadoop fs -mkdir /tmp/mapred/system && hadoop fs -chown mapred:hadoop /tmp/mapred/system'
 su - hdfs -c 'hadoop fs -mkdir -p /tmp/hadoop-mapred/mapred && hadoop fs -chown -R mapred /tmp/hadoop-mapred/mapred && hadoop fs -chmod 1777 /tmp/hadoop-mapred/mapred'
 
-service hadoop-0.20-mapreduce-jobtracker start
-service hadoop-0.20-mapreduce-tasktracker start
-
 ######################################################################################
-# commands for banno druid usage:
+# commands for banno usage:
 
 #create /druid hdfs dir for druid-setup tests
 su - hdfs -c 'hadoop fs -mkdir /druid && hadoop fs -chown druid /druid'
+
+su - hdfs -c 'hadoop fs -mkdir /camus && hadoop fs -chown banno-camus /camus'
 ######################################################################################
+
+service hadoop-0.20-mapreduce-jobtracker start
+service hadoop-0.20-mapreduce-tasktracker start
 
 if [[ $1 == "-d" ]]; then
   while true; do sleep 1000; done
