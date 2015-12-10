@@ -1,6 +1,6 @@
 #Banno fork
 
-Changes to use Hadoop 2.0.0-cdh4.4.0 for internal purposes. Just run `./build-push.sh` if you make changes.
+Changes to use Hadoop 2.0.0-cdh4.3.0 for internal purposes. Just run `./build-push.sh` if you make changes.
 
 #Apache Hadoop 2.7.0 Docker image
 
